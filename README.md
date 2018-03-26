@@ -10,8 +10,7 @@
 
 # Installation
 
-As this bot is written in C#, it will only work on Windows. It uses .NET Framework 4.6.1.
-
+As this bot is written in C#, it will only work on Windows. It uses .NET Framework 4.6.1.  
 All you have to do is to download [this archive](http://hawezo.legtux.org/downloads/bkbot.zip) which contains a `bin` folder with the bot and its files, and two `.cmd` scripts. The first one will start the bot and the second one will open the `settings.json` file used by the bot.
 
 ## Settings
@@ -27,17 +26,14 @@ Settings are stored in a `settings.json` file which has to be in the same direct
 }
 ```
 
-`url`: the URL of the survey. Other localization may work as well, but have not been tested.
-
-`reference`: the reference of your Burger King. It is written in the top front of your ticket.
-
-`postalCode`: required for the survey, any valid postal code.
-
-`amount`: the amount of codes the bot will try to get after starting it.
+`url`: the URL of the survey. Other localization may work as well, but have not been tested.  
+`reference`: the reference of your Burger King. It is written in the top front of your ticket.  
+`postalCode`: required for the survey, any valid postal code.  
+`amount`: the amount of codes the bot will try to get after starting it. 
 
 ## How it works
 
-`bkbot` uses [cefsharp/CefSharp] to emulate a web browser and interact with it.
+`bkbot` uses [CefSharp](https://github.com/cefsharp/CefSharp) to emulate a web browser and interact with it.
 
 It will start by opening the URL in the `settings.json` file, and will then proceed step by step to complete the survey, using Javascript to fill the required data.
 
@@ -59,6 +55,11 @@ this.Code = js.Result.ToString().Split(' ')[js.Result.ToString().Split(' ').Leng
 ```
 
 And yes, I know, I could have put more efforts and less redundancy in parsing the code from the string.
+
+## Libraries used
+
+- [CefSharp](https://github.com/cefsharp/CefSharp): used to emulate an offscreen web browser thanks to Chromium. Its downside is its size, about 60 Mo.
+- [ShellProgressBar](https://github.com/Mpdreamz/shellprogressbar): used to display a fancy progress bar.
 
 ---
 
