@@ -11,7 +11,7 @@
 # Installation
 
 As this bot is written in C#, it will only work on Windows. It uses .NET Framework 4.6.1.  
-All you have to do is to download [this archive](http://hawezo.legtux.org/downloads/bkbot.zip) which contains a `bin` folder with the bot and its files, and two `.cmd` scripts. The first one will start the bot and the second one will open the `settings.json` file used by the bot.
+All you have to do is to download [this archive](http://hawezo.legtux.org/downloads/bkbot.zip) (dead link atm) which contains a `bin` folder with the bot and its files, and two `.cmd` scripts. The first one will start the bot and the second one will open the `settings.json` file used by the bot.
 
 ## Settings
 
